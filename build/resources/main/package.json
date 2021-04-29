@@ -1,0 +1,179 @@
+{
+    "name": "BsUteis",
+    "label": "BsUteis",
+    "description": "Sample package to demo dictionary return",
+    "group": "com.automationanywhere",
+    "artifactName": "BsUteis",
+    "packageVersion": "1.2.1-20210415-142519",
+    "codeVersion": "1.2.1-20210415-142519",
+    "author": "",
+    "commands": [
+        {
+            "name": "FormatCNPJ",
+            "label": "FormatCNPJ",
+            "description": "Esta action formata uma string para o formato de CNPJ!",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.FormatCNPJCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "value",
+                    "label": "VALOR",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FormatCPF",
+            "label": "FormatCPF",
+            "description": "Esta action formata uma string para o formato de CPF!",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.FormatCPFCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "value",
+                    "label": "VALOR",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GetCredential",
+            "label": "GetCredential",
+            "description": "Esta action retorna a credential como string",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.GetCredentialCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "Credential",
+                    "label": "Credential",
+                    "type": "CREDENTIAL",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GetFilesFromPath",
+            "label": "GetFilesFromPath",
+            "description": "Esta action captura os arquivos de uma pasta",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.GetFilesFromPathCommand",
+            "icon": "pkg.svg",
+            "returnType": "LIST",
+            "returnSubtype": "STRING",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "diretorio",
+                    "label": "Diret\u00f3rio",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "pattern",
+                    "label": "Regex",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": ".*",
+                        "type": "STRING"
+                    }
+                },
+                {
+                    "name": "fullName",
+                    "label": "Nome completo do arquivo:",
+                    "description": "Nome completo do arquivo:",
+                    "type": "BOOLEAN"
+                }
+            ]
+        },
+        {
+            "name": "MaskString",
+            "label": "MaskString",
+            "description": "Esta action formata uma string para o formato predefinido",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.MaskStringCommand",
+            "icon": "pkg.svg",
+            "returnType": "STRING",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "value",
+                    "label": "VALOR",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "mascara",
+                    "label": "MASCARA",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "validChars",
+                    "label": "Caracteres v\u00e1lidos",
+                    "type": "TEXT",
+                    "defaultValue": {
+                        "string": "ALL",
+                        "type": "STRING"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "TableQuery",
+            "label": "TableQuery",
+            "description": "Esta action formata converte uma para strings de insert (Mysql)",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.TableQueryCommand",
+            "icon": "pkg.svg",
+            "returnType": "LIST",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "Table",
+                    "label": "Tabela",
+                    "type": "TABLE"
+                }
+            ]
+        }
+    ]
+}
